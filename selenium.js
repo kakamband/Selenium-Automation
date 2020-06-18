@@ -121,6 +121,6 @@ async function sendMail(){
     let message=await driver.findElement(swd.By.css(' div.tS-tW[role="textbox"]'));
     await message.sendKeys(`Name of video -> ${name}`,swd.Key.ENTER,`Total views on video = ${views}`,swd.Key.ENTER,'Click on the link to go to the video',swd.Key.ENTER, goToUrl);
     console.log(`Total views on video = ${views}`);
-    // let send=await driver.findElement(swd.By.css('.aoO'));
-    // await send.click();
+    let send=await driver.findElement(swd.By.css('.aoO'));
+    await send.click();
 }
